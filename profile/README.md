@@ -1,6 +1,6 @@
 ## Hi there! 👋🏻
 
-![alt](https://raw.githubusercontent.com/jstack-be/.github/main/res/logo_light.svg#gh-dark-mode-only)
+![alt](../res/logo_light.png#gh-dark-mode-only)
 ![alt](https://raw.githubusercontent.com/jstack-be/.github/main/res/logo_dark.svg#gh-light-mode-only)
 
 We're jstack.
