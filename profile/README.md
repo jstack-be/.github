@@ -7,4 +7,4 @@ We're jstack.
 you can find out about us [here](https://jstack.eu)  
   
 If you're a fellow jstackian, here are some useful links on our Github usage.  
-- [Contribution Guide](../CONTRIBUTING.md)
+- [Contribution Guide](https://github.com/jstack-be/.github/blob/CONTRIBUTING.md)
