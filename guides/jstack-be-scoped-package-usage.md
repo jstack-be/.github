@@ -52,9 +52,9 @@ Use the following contents:
 # in the GitHub packages registry
 @jstack-be:registry=https://npm.pkg.github.com
 
-# Tell npm to use the value of the GH_PKGS_READ_TOKEN
+# Tell npm to use the value of the GH_PKGS_ACCESS_TOKEN
 # environment variable as an auth token for accessing the registry
-//npm.pkg.github.com/:_authToken=${GH_PKGS_READ_TOKEN}
+//npm.pkg.github.com/:_authToken=${GH_PKGS_ACCESS_TOKEN}
 always-auth=true
 ```
 
