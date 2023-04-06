@@ -40,6 +40,7 @@ export GH_PKGS_ACCESS_TOKEN="PAT value here"
 # fish
 set -Ux GH_PKGS_ACCESS_TOKEN "PAT value here"
 ```
+(Windows users are welcome to add Windows instructions here)
 
 ## 3. Configuring a node project to use a jstack-be scoped package
 
