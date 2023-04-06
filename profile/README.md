@@ -8,3 +8,4 @@ you can find out about us [here](https://jstack.eu)
   
 If you're a fellow jstackian, here are some useful links on our Github usage.  
 - [Contribution Guide](https://github.com/jstack-be/.github/blob/main/CONTRIBUTING.md)
+- [Using jstack-be scoped packages in NodeJS projects]()
