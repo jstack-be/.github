@@ -6,7 +6,7 @@ To be able to delegate downloading `jstack-be` scoped packages from GitHub packa
 
 To get one, go to [https://github.com/settings/tokens](https://github.com/settings/tokens), click ‘Tokens (classic)’ and ‘Generate new token (classic)’.
 
-![PAT instruction 1](https://github.com/jstack-be/.github/blob/main/res/guides/pat-1.png)
+![PAT instruction 1](https://github.com/jstack-be/.github/blob/main/res/uides/pat-1.png)
 ![PAT instruction 2](https://github.com/jstack-be/.github/blob/main/res/guides/pat-2.png)
 
 Give your new PAT a descriptive name like `gh packages jstack-be read' and choose an expiration period.  
@@ -61,15 +61,7 @@ always-auth=true
 This should work for npm, yarn, and pnpm.  
 If your project uses yarn 2+, use [yarn’s instructions](https://yarnpkg.com/configuration/yarnrc) for converting `.npmrc` to `.yarnrc.yml`
 
-## 4. Making sure your GitHub user has access to the package
-
-You should be able to see or search for the package(s) you want to use on [the jstack-be packages GitHub page](https://github.com/orgs/jstack-be/packages).  
-If you can't, several things might be wrong.  
-  
-- Package access can be managed byt admins. Ask an admin to give you, or a team you are member of, access to the package.
-- It's possible that the package is related to a repository you don't have access to. Ask an admin, or a repository owner to give you, or a team you are member of, access to the package.
-
-## 5. Installing a @jstack-be scoped package in your project
+## 4. Installing a @jstack-be scoped package in your project
 
 Add a @jstack-be scoped package to your `package.json`
 
@@ -79,4 +71,16 @@ Add a @jstack-be scoped package to your `package.json`
 }
 ```
 
-If you followed all the steps in this guide correctly, you should now be able to run `npm install` / `yarn` / `pnpm install`
+If you followed all the steps in this guide correctly, you should now be able to run `npm install` / `yarn` / `pnpm install`.
+
+# Troubleshooting
+
+## If you get `Permission permission_denied: read_package` during installation of node modules.
+
+First check that the access token you're using in `.npmrc` is the correct one. It has to have *at least* `read:packages` permission.
+
+Next check that you're able to see or search for the package(s) you want to use on the [jstack-be packages GitHub page](https://github.com/orgs/jstack-be/packages).  
+If you can't, your gitHub account might not have sufficient access to the package.  
+  
+- Package access can be managed by admins. Ask an admin to give you, or a team you're a member of, access to the package(s).
+- It's possible that the package is related to a repository you don't have access to. Ask an admin or a repository owner to give you, or a team you're a member of, access to the package.
