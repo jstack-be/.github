@@ -61,7 +61,15 @@ always-auth=true
 This should work for npm, yarn, and pnpm.  
 If your project uses yarn 2+, use [yarn’s instructions](https://yarnpkg.com/configuration/yarnrc) for converting `.npmrc` to `.yarnrc.yml`
 
-## 4. Installing a @jstack-be scoped package in your project
+## 4. Making sure your GitHub user has access to the package
+
+You should be able to see or search for the package(s) you want to use on [the jstack-be packages GitHub page](https://github.com/orgs/jstack-be/packages).  
+If you can't, several things might be wrong.  
+  
+- Package access can be managed byt admins. Ask an admin to give you, or a team you are member of, access to the package.
+- It's possible that the package is related to a repository you don't have access to. Ask an admin, or a repository owner to give you, or a team you are member of, access to the package.
+
+## 5. Installing a @jstack-be scoped package in your project
 
 Add a @jstack-be scoped package to your `package.json`
 
