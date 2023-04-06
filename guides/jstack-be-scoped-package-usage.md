@@ -53,7 +53,7 @@ Use the following contents:
 
 # Tell npm to use the value of the GH_PKGS_READ_TOKEN
 # environment variable as an auth token for accessing the registry
-//npm.pkg.github.com/:_authToken=$GH_PKGS_READ_TOKEN
+//npm.pkg.github.com/:_authToken=${GH_PKGS_READ_TOKEN}
 always-auth=true
 ```
 
