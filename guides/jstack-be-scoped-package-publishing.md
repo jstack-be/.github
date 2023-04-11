@@ -79,7 +79,7 @@ always-auth=true
 This should work for npm, yarn (v1), and pnpm.  
 If your project uses yarn 2+, use [yarn’s instructions](https://yarnpkg.com/configuration/yarnrc) for converting `.npmrc` to `.yarnrc.yml`.  
   
-You should now be able to run `npm publish`, `yarn publish`, or `pnpm publish` to publish your package to GitHub packages.
+You should now be able to run `npm publish`, `yarn publish`, or `pnpm publish` to publish your package to GitHub packages and it should be [listed here](https://github.com/orgs/jstack-be/packages).
 
 ## Setting package visibility
 
