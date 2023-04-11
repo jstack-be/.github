@@ -1,22 +1,22 @@
-# Using `jstack-be:______` scoped packages from the GitHub package registry in NodeJS projects
+# Using `@jstack-be:______` scoped packages from the GitHub package registry in NodeJS projects
 
 ## 1. Github Personal Access Token
 
-To be able to delegate downloading `jstack-be` scoped packages from GitHub packages to your package manager (npm, pnpm, yarn) wou will need a GitHub personal access token (PAT) with the `read:packages` scope.
+To be able to delegate downloading `@jstack-be` scoped packages from GitHub packages to your package manager (npm, pnpm, yarn) you will need a GitHub personal access token (PAT) with the `read:packages` scope.
 
 To get one, go to [https://github.com/settings/tokens](https://github.com/settings/tokens), click ‘Tokens (classic)’ and ‘Generate new token (classic)’.
 
-![PAT instruction 1](https://github.com/jstack-be/.github/blob/main/res/uides/pat-1.png)
-![PAT instruction 2](https://github.com/jstack-be/.github/blob/main/res/guides/pat-2.png)
+![PAT instruction 1](https://github.com/jstack-be/.github/blob/main/assets/guides/package-usage/pat-1.png)
+![PAT instruction 2](https://github.com/jstack-be/.github/blob/main/assets/guides/package-usage/pat-2.png)
 
 Give your new PAT a descriptive name like `gh packages jstack-be read' and choose an expiration period.  
 It's okay to select 'no expiration', but the choice is up to you. You will have to regenerate your token after your selected period has passed.
 
-![PAT instruction 3](https://github.com/jstack-be/.github/blob/main/res/guides/pat-3.png)
+![PAT instruction 3](https://github.com/jstack-be/.github/blob/main/assets/guides/package-usage/pat-3.png)
 
 Be sure to enable the `read:packages` scope.
 
-![PAT instruction 4](https://github.com/jstack-be/.github/blob/main/res/guides/pat-4.png)
+![PAT instruction 4](https://github.com/jstack-be/.github/blob/main/assets/guides/package-usage/pat-4.png)
 
 Click ‘Generate token’. copy the value of your token and store it in a secure place.  
 ❗Github will show you the value of your token only one time.  
@@ -42,7 +42,7 @@ set -Ux GH_PKGS_ACCESS_TOKEN "PAT value here"
 ```
 (Windows users are welcome to add Windows instructions here)
 
-## 3. Configuring a node project to use a jstack-be scoped package
+## 3. Configuring a node project to use an @jstack-be scoped package
 
 Add a `.npmrc` file to your project, in the same directory as your `package.json` file.  
 Use the following contents:
@@ -54,16 +54,16 @@ Use the following contents:
 
 # Tell npm to use the value of the GH_PKGS_ACCESS_TOKEN
 # environment variable as an auth token for accessing the registry
-//npm.pkg.github.com/:_authToken=${GH_PKGS_ACCESS_TOKEN}
+//npm.pkg.github.com/:_authToken=${GH_PKGS_READ_TOKEN}
 always-auth=true
 ```
 
 This should work for npm, yarn, and pnpm.  
 If your project uses yarn 2+, use [yarn’s instructions](https://yarnpkg.com/configuration/yarnrc) for converting `.npmrc` to `.yarnrc.yml`
 
-## 4. Installing a @jstack-be scoped package in your project
+## 4. Installing an @jstack-be scoped package in your project
 
-Add a @jstack-be scoped package to your `package.json`
+Add an @jstack-be scoped package to your `package.json`
 
 ```json
 "dependencies": {
@@ -71,7 +71,7 @@ Add a @jstack-be scoped package to your `package.json`
 }
 ```
 
-If you followed all the steps in this guide correctly, you should now be able to run `npm install` / `yarn` / `pnpm install`.
+If you followed all the steps in this guide correctly, you should now be able to run `npm install` / `yarn` / `pnpm install`. The package(s) should be installed in your `node_modules` directory.
 
 # Troubleshooting
 
@@ -84,3 +84,5 @@ If you can't, your gitHub account might not have sufficient access to the packag
   
 - Package access can be managed by admins. Ask an admin to give you, or a team you're a member of, access to the package(s).
 - It's possible that the package is related to a repository you don't have access to. Ask an admin or a repository owner to give you, or a team you're a member of, access to the package.
+=======
+If you followed all the steps in this guide correctly, you should now be able to run `npm install` / `yarn` / `pnpm install` without errors. The package(s) should be installed in your `node_modules` directory.
