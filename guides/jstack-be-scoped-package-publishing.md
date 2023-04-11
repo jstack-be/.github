@@ -87,9 +87,9 @@ You should now be able to run `npm publish`, `yarn publish`, or `pnpm publish` t
 Github documentation on package access control and visibility [can be found here](https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility).  
   
 You can probably figure out how to achieve the specific visibility you want from these docs, but if you simply want your package to be visible to all jstack-be org members, you can either (by order of preference):
+- Add the `jstack-be/developers` team as a collaborator to the repository the package's codebase is hosted in. By default, package visibility is inherited from their repository.
 - Set the package's visibility to `internal` in the package's settings. This way, everyone in the jstack-be organization can see the package.
 - Go to your package's settings, click 'Invite teams or people' and add the `jstack-be/developers` team as a member with `Role: Read`.
-- Add the `jstack-be/developers` team as a collaborator to the repository the package's codebase is hosted in.
 
 
 ## Creating Github Personal Access Token (PAT)
