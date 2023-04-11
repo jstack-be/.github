@@ -43,6 +43,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           registry-url: https://npm.pkg.github.com/
+      # Your installation, build, and publish commands may be different, or maybe you use a different package manager.
+      # Adjust, omit, or add to these steps as needed.
       - run: npm install
       - run: npm run build
       - run: npm publish
