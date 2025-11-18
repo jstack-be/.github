@@ -24,7 +24,7 @@ Click ‘Generate token’. copy the value of your token and store it in a secur
 
 ## 2. Making the PAT value available in your environment
 
-If you set an environment variable with the value of your token, you facilitate sharing `.npmrc` files among the team an among projects (see a further step in this guide).  
+If you set an environment variable with the value of your token, you facilitate sharing `.npmrc` files among the team and among projects (see a further step in this guide).  
 The recommended name for this variable is `GH_PKGS_ACCESS_TOKEN`.  
 The way you set a global and permanent environment variables depends on your shell of choice.
 
